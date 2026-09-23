@@ -32,7 +32,7 @@ const tasks = [
 export default function Onboarding() {
     return (
         <>
-            <Head title="Onboarding" />
+            <Head title="Employee readiness" />
             <div className="flex h-full flex-1 flex-col gap-6 p-4 md:p-6">
                 <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                     <div>
@@ -42,7 +42,7 @@ export default function Onboarding() {
                         <h1 className="text-3xl font-semibold tracking-tight">
                             Onboarding
                         </h1>
-                        <p className="mt-2 text-sm text-muted-foreground">
+                        <p className="mt-2 text-base font-medium text-sky-700 dark:text-sky-300">
                             Employee readiness
                         </p>
                     </div>
@@ -73,8 +73,8 @@ export default function Onboarding() {
                     <CardHeader>
                         <CardTitle>Employee readiness</CardTitle>
                         <CardDescription>
-                            Onboarding checklist and document completion by
-                            incoming employee
+                            Employee readiness checklist and document completion
+                            by incoming employee
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-3">

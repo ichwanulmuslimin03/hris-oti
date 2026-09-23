@@ -21,34 +21,18 @@ const recruitmentMetrics = [
     { label: "Hired this month", value: "36", icon: Users },
 ];
 
-const candidates = [
-    {
-        name: "Ayu Lestari",
-        role: "Operator",
-        stage: "Interview",
-        status: "Scheduled",
-    },
-    {
-        name: "Reza Pratama",
-        role: "Supervisor",
-        stage: "Technical test",
-        status: "In progress",
-    },
-    {
-        name: "Dinda Putri",
-        role: "HSE Officer",
-        stage: "Offer review",
-        status: "Pending",
-    },
-    {
-        name: "Fadli Rahman",
-        role: "Mechanic",
-        stage: "Background check",
-        status: "On track",
-    },
-];
+type Candidate = {
+    name: string;
+    role: string;
+    stage: string;
+    status: string;
+};
 
-export default function Recruitment() {
+export default function Recruitment({
+    candidates = [],
+}: {
+    candidates?: Candidate[];
+}) {
     return (
         <>
             <Head title="Recruitment" />

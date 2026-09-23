@@ -9,45 +9,15 @@ import {
 import { Head } from "@inertiajs/react";
 import { CalendarDays, Clock3, Users } from "lucide-react";
 
-const roster = [
-    {
-        day: "Mon",
-        shift: "A Shift",
-        crew: "Mining Crew 1",
-        coverage: "96%",
-        status: "On track",
-    },
-    {
-        day: "Tue",
-        shift: "B Shift",
-        crew: "Mining Crew 2",
-        coverage: "92%",
-        status: "Watchlist",
-    },
-    {
-        day: "Wed",
-        shift: "A Shift",
-        crew: "Processing",
-        coverage: "98%",
-        status: "On track",
-    },
-    {
-        day: "Thu",
-        shift: "C Shift",
-        crew: "Maintenance",
-        coverage: "90%",
-        status: "Risk",
-    },
-    {
-        day: "Fri",
-        shift: "B Shift",
-        crew: "Camp Support",
-        coverage: "95%",
-        status: "On track",
-    },
-];
+type RosterEntry = {
+    day: string;
+    shift: string;
+    crew: string;
+    coverage: string;
+    status: string;
+};
 
-export default function Roster() {
+export default function Roster({ roster = [] }: { roster?: RosterEntry[] }) {
     return (
         <>
             <Head title="Roster" />

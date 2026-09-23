@@ -9,45 +9,27 @@ import {
 import { Head } from "@inertiajs/react";
 import { BadgeCheck, MapPinned, TimerReset, UserCheck } from "lucide-react";
 
-const attendanceToday = [
-    {
-        name: "Budi Santoso",
-        site: "North Pit",
-        status: "Present",
-        time: "06:02",
-        type: "Clock-in",
-    },
-    {
-        name: "Andi Pratama",
-        site: "Processing",
-        status: "Late",
-        time: "06:18",
-        type: "Clock-in",
-    },
-    {
-        name: "Eko Sulistyo",
-        site: "Maintenance",
-        status: "On Duty",
-        time: "07:05",
-        type: "Field check",
-    },
-    {
-        name: "Dewi Lestari",
-        site: "Camp Support",
-        status: "Absent",
-        time: "-",
-        type: "Leave",
-    },
-];
+type AttendanceRecord = {
+    name: string;
+    site: string;
+    status: string;
+    time: string;
+    type: string;
+};
 
-const stats = [
-    { label: "Present", value: "812", tone: "bg-emerald-500" },
-    { label: "Late", value: "24", tone: "bg-amber-500" },
-    { label: "Absent", value: "18", tone: "bg-rose-500" },
-    { label: "Leave", value: "31", tone: "bg-sky-500" },
-];
+type StatItem = {
+    label: string;
+    value: string;
+    tone: string;
+};
 
-export default function Attendance() {
+export default function Attendance({
+    attendanceToday = [],
+    stats = [],
+}: {
+    attendanceToday?: AttendanceRecord[];
+    stats?: StatItem[];
+}) {
     return (
         <>
             <Head title="Attendance" />
