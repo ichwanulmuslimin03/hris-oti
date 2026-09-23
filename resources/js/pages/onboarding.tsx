@@ -42,6 +42,9 @@ export default function Onboarding() {
                         <h1 className="text-3xl font-semibold tracking-tight">
                             Onboarding
                         </h1>
+                        <p className="mt-2 text-sm text-muted-foreground">
+                            Employee readiness
+                        </p>
                     </div>
                     <Badge className="w-fit bg-sky-100 text-sky-700 dark:bg-sky-500/15 dark:text-sky-300">
                         12 new hires in progress
